@@ -30,14 +30,6 @@ A lightweight and responsive web-based chat application built with **Flask**, **
 
 ---
 
-## 📸 UI Screenshots
-
-| Login/Register | Chat Room |
-|----------------|-----------|
-| ![Login](https://i.imgur.com/WYPKcXr.png) | ![Chat](https://i.imgur.com/pac2bEY.png) |
-
-> (Replace the image URLs with actual screenshots if you upload them.)
-
 ---
 
 ## 🧪 Tech Stack
