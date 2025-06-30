@@ -8,7 +8,7 @@ UPLOAD_FOLDER = os.path.expanduser("~/hi/uploads")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
+#You can edit this
 # HTML Template
 HTML_TEMPLATE = '''
 <!DOCTYPE html>
