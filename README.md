@@ -9,7 +9,9 @@ A collection of lightweight and powerful Python tools for secure local networkin
 - ⚡ **Fast File Sharing:** Host a simple local web server using `server.py` and `speed.py` for sharing files across devices.
 - 🔐 **Encrypted Vault:** Store sensitive credentials using `Master vault.py`, protected with 5-layer encryption.
 - 💾 **Binary Storage:** Data is securely saved in `.bin` files to prevent plain-text access.
-
+---
+# 🔐 Simple Vault 
+- ``you  can run it anywhere 😜 and no --need to install external librarys``
 ---
 
 # 💬 Realtime Chat App (Flask + Socket.IO)
