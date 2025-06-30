@@ -14,7 +14,7 @@ def init_db():
         conn.commit()
 init_db()
 
-# Templates (HTML + CSS + JS)
+# Templates ( HTML + CSS + JS )
 login_page = '''
 <!DOCTYPE html>
 <html>
