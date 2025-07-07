@@ -1,28 +1,5 @@
-# 🔒 Secure Tools Suite
+The Simple Vault (Master vault.py) lets you store and protect your passwords securely. It works without installing any extra libraries and saves your data encrypted in .bin files.
 
-A small collection of Python tools for simple security and networking tasks.
+The Fast File Sharing (server.py, speed.py) allows you to share files easily over your local network. Just run the script and share your IP address with other devices to download the files.
 
----
-
-## 📁 Tools
-
-### 1. 🔐 Simple Vault (`Master vault.py`)
-- Save and protect your passwords.
-- Works without extra libraries.
-- Saves encrypted data in `.bin` files.
-
-### 2. ⚡ Fast File Sharing (`server.py`, `speed.py`)
-- Share files easily over your local network.
-- Just run the script and share your IP.
-
-### 3. 💬 Realtime Chat App (`chat.py`)
-- Web-based real-time chat using Flask + Socket.IO.
-- User registration/login and message history (SQLite).
-- Clean and responsive UI.
-
----
-
-## ✅ Quick Start
-- Copy any script and run with:
-```bash
-python3 filename.py
+The Realtime Chat App (chat.py) is a basic web-based real-time chat built using Flask and Socket.IO. It supports user registration, login, and real-time messaging. Messages and users are saved in an SQLite database. The app runs in your browser and has a simple, clean UI.
