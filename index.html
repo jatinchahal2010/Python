@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Secure Text Encryptor & Decryptor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            background: linear-gradient(90deg, #00bfff, #4b6cb7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #2e2e2e;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #00bfff, #4b6cb7);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #4b6cb7, #00bfff);
+        }
+
+        pre {
+            background-color: #2e2e2e;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 Secure Text Encryptor & Decryptor</h1>
+
+    <input type="text" id="key" placeholder="Enter your secret key">
+    <textarea id="inputText" rows="4" placeholder="Type your message here..."></textarea>
+
+    <div>
+        <button onclick="encryptText()">Encrypt 🔒</button>
+        <button onclick="decryptText()">Decrypt 🔓</button>
+    </div>
+
+    <h3>🔎 Output:</h3>
+    <pre id="output"></pre>
+</div>
+
+<script>
+function encrypt(text, key) {
+    let result = '';
+    let keyLength = key.length;
+
+    for (let i = 0; i < text.length; i++) {
+        let char = text[i];
+        if (/[a-zA-Z]/.test(char)) {
+            let shift = key[i % keyLength].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+            if (char >= 'A' && char <= 'Z') {
+                result += String.fromCharCode((char.charCodeAt(0) - 'A'.charCodeAt(0) + shift) % 26 + 'A'.charCodeAt(0));
+            } else {
+                result += String.fromCharCode((char.charCodeAt(0) - 'a'.charCodeAt(0) + shift) % 26 + 'a'.charCodeAt(0));
+            }
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+
+function decrypt(text, key) {
+    let result = '';
+    let keyLength = key.length;
+
+    for (let i = 0; i < text.length; i++) {
+        let char = text[i];
+        if (/[a-zA-Z]/.test(char)) {
+            let shift = key[i % keyLength].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+            if (char >= 'A' && char <= 'Z') {
+                result += String.fromCharCode((char.charCodeAt(0) - 'A'.charCodeAt(0) - shift + 26) % 26 + 'A'.charCodeAt(0));
+            } else {
+                result += String.fromCharCode((char.charCodeAt(0) - 'a'.charCodeAt(0) - shift + 26) % 26 + 'a'.charCodeAt(0));
+            }
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+
+function encryptText() {
+    const key = document.getElementById("key").value;
+    const text = document.getElementById("inputText").value;
+    document.getElementById("output").innerText = encrypt(text, key);
+}
+
+function decryptText() {
+    const key = document.getElementById("key").value;
+    const text = document.getElementById("inputText").value;
+    document.getElementById("output").innerText = decrypt(text, key);
+}
+</script>
+
+</body>
+</html>
