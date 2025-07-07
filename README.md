@@ -1,48 +1,28 @@
 # 🔒 Secure Tools Suite
 
-A collection of lightweight and powerful Python tools for secure local networking and password storage.
+A small collection of Python tools for simple security and networking tasks.
 
 ---
 
-## 📂 Features
+## 📁 Tools
 
-- ⚡ **Fast File Sharing:** Host a simple local web server using `server.py` and `speed.py` for sharing files across devices.
-- 🔐 **Encrypted Vault:** Store sensitive credentials using `Master vault.py`, protected with 5-layer encryption.
-- 💾 **Binary Storage:** Data is securely saved in `.bin` files to prevent plain-text access.
----
-# 🔐 Simple Vault 
-- ``you  can run it anywhere 😜 and no --need to install external librarys``
----
+### 1. 🔐 Simple Vault (`Master vault.py`)
+- Save and protect your passwords.
+- Works without extra libraries.
+- Saves encrypted data in `.bin` files.
 
-# 💬 Realtime Chat App (Flask + Socket.IO)
+### 2. ⚡ Fast File Sharing (`server.py`, `speed.py`)
+- Share files easily over your local network.
+- Just run the script and share your IP.
 
-A lightweight and responsive web-based chat application built with **Flask**, **Socket.IO**, and **SQLite**. It supports user registration, login/logout, and real-time group chat with message history.
-
----
-
-## 🚀 Features
-
-- 🔐 User Registration & Login (with session management)
-- 💬 Real-time messaging using **WebSockets (Socket.IO)**
-- 🧠 Message history stored in **SQLite**
-- 💾 Persistent database for users and messages
-- 🌐 Simple responsive HTML/CSS UI
-- 📸 Avatar generation via `pravatar.cc`
-- 🧠 Built-in lightweight backend server (no external deployment needed)
+### 3. 💬 Realtime Chat App (`chat.py`)
+- Web-based real-time chat using Flask + Socket.IO.
+- User registration/login and message history (SQLite).
+- Clean and responsive UI.
 
 ---
 
----
-
-## 🧪 Tech Stack
-
-- **Flask** (Python web framework)
-- **Flask-SocketIO** (real-time communication)
-- **SQLite3** (database for users & messages)
-- **HTML5/CSS3/JS** (frontend in templates)
-- No external template files – everything is in one file (`render_template_string`)
-
----
-
-## ⚙️ Installation
-- You can just copy any code 😁 
+## ✅ Quick Start
+- Copy any script and run with:
+```bash
+python3 filename.py
